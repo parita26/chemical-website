@@ -1,33 +1,27 @@
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import ProductCard from "../../components/ProductCard"
 
 export default function Products() {
+  const products = [
+    { name: "Sulphuric Acid", image: "/product1.jpg" },
+    { name: "Hydrochloric Acid", image: "/product2.jpg" },
+    { name: "Sodium Hydroxide", image: "/product3.jpg" },
+    { name: "Nitric Acid", image: "/product4.jpg" },
+    { name: "Ammonia Solution", image: "/product5.jpg" },
+    { name: "Calcium Carbonate", image: "/product6.jpg" },
+  ]
+
   return (
-    <>
-      <Navbar />
-
-      <section className="section">
-        <h2>Our Products</h2>
-
-        <div className="grid">
-          <div className="card">
-            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" />
-            <h3>Industrial Acid</h3>
-          </div>
-
-          <div className="card">
-            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc" />
-            <h3>Lab Chemicals</h3>
-          </div>
-
-          <div className="card">
-            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789" />
-            <h3>Organic Compounds</h3>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </>
-  );
+    <section className="section">
+      <h1>Our Products</h1>
+      <div className="card-container">
+        {products.map((product, index) => (
+          <ProductCard
+            key={index}
+            name={product.name}
+            image={product.image}
+          />
+        ))}
+      </div>
+    </section>
+  )
 }

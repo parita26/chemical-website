@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <div className="footer">
-      <p>© 2026 ChemTech Industry</p>
-    </div>
-  );
+    <footer className="footer">
+      <p>© 2026 Industrial Chemical Company</p>
+    </footer>
+  )
 }

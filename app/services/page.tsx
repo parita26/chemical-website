@@ -1,33 +1,27 @@
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import ServiceCard from "../../components/ServiceCard"
 
 export default function Services() {
+  const services = [
+    { title: "Chemical Manufacturing", image: "/service1.jpg" },
+    { title: "Laboratory Testing", image: "/service2.jpg" },
+    { title: "Industrial Consulting", image: "/service3.jpg" },
+    { title: "Water Treatment Solutions", image: "/service4.jpg" },
+    { title: "Quality Control", image: "/service5.jpg" },
+    { title: "Research & Development", image: "/service6.jpg" },
+  ]
+
   return (
-    <>
-      <Navbar />
-
-      <section className="section">
-        <h2>Our Services</h2>
-
-        <div className="grid">
-          <div className="card">
-            <h3>Chemical Manufacturing</h3>
-            <p>Custom production solutions.</p>
-          </div>
-
-          <div className="card">
-            <h3>Lab Testing</h3>
-            <p>Accurate testing services.</p>
-          </div>
-
-          <div className="card">
-            <h3>R&D</h3>
-            <p>Innovative chemical research.</p>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </>
-  );
+    <section className="section">
+      <h1>Our Services</h1>
+      <div className="card-container">
+        {services.map((service, index) => (
+          <ServiceCard
+            key={index}
+            title={service.title}
+            image={service.image}
+          />
+        ))}
+      </div>
+    </section>
+  )
 }

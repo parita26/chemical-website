@@ -1,20 +1,41 @@
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-
 export default function About() {
   return (
-    <>
-      <Navbar />
+    <section className="about-section">
+      <div className="about-container">
+        
+        <div className="about-image">
+          <img src="/service1.jpg" alt="company" />
+        </div>
 
-      <section className="section">
-        <h2>About Us</h2>
-        <p>
-          ChemTech Industry is a leading provider of industrial chemicals,
-          delivering innovation, safety, and quality across global markets.
-        </p>
-      </section>
+        <div className="about-content">
+          <h1>About Our Company</h1>
+          <p>
+            We are a leading industrial chemical company providing high quality
+            chemicals for pharmaceutical, textile, agriculture and water
+            treatment industries. Our company focuses on quality, safety and
+            innovation.
+          </p>
 
-      <Footer />
-    </>
-  );
+          <div className="about-boxes">
+            <div className="about-box">
+              <h2>10+</h2>
+              <p>Years Experience</p>
+            </div>
+
+            <div className="about-box">
+              <h2>50+</h2>
+              <p>Products</p>
+            </div>
+
+            <div className="about-box">
+              <h2>100+</h2>
+              <p>Clients</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  )
 }
